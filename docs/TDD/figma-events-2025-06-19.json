@@ -1,0 +1,433 @@
+{
+  "screens": [
+    {
+      "screenName": "Aceptar términos - Actualizar tarjeta de débito",
+      "events": [
+        {
+          "id": "evt_001",
+          "type": "view",
+          "element": "form",
+          "description": "Usuario ve la pantalla de actualización de tarjeta de débito con términos y CTA deshabilitado",
+          "action": "home/tarjeta_debito/actualizar_form_view",
+          "navigation": "",
+          "validation": "",
+          "properties": {
+            "screen": "home/tarjeta_debito/actualizar",
+            "step": "1",
+            "method": "app",
+            "timestamp": "",
+            "session_id": "",
+            "user_id": "",
+            "event_id": "",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "evt_002",
+          "type": "click",
+          "element": "link",
+          "description": "Usuario abre los Términos y Condiciones",
+          "action": "home/tarjeta_debito/actualizar_link_click",
+          "navigation": "home/tarjeta_debito/terminos",
+          "validation": "",
+          "properties": {
+            "screen": "home/tarjeta_debito/actualizar",
+            "step": "1",
+            "method": "app",
+            "timestamp": "",
+            "session_id": "",
+            "user_id": "",
+            "event_id": "",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "evt_003",
+          "type": "click",
+          "element": "link",
+          "description": "Usuario abre el Contrato RECA",
+          "action": "home/tarjeta_debito/actualizar_link_click",
+          "navigation": "home/tarjeta_debito/contrato_reca",
+          "validation": "",
+          "properties": {
+            "screen": "home/tarjeta_debito/actualizar",
+            "step": "1",
+            "method": "app",
+            "timestamp": "",
+            "session_id": "",
+            "user_id": "",
+            "event_id": "",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "evt_004",
+          "type": "change",
+          "element": "form",
+          "description": "Usuario marca la casilla de aceptación de términos",
+          "action": "home/tarjeta_debito/actualizar_form_change",
+          "navigation": "",
+          "validation": "terms_checkbox_must_be_checked",
+          "properties": {
+            "screen": "home/tarjeta_debito/actualizar",
+            "step": "1",
+            "method": "app",
+            "timestamp": "",
+            "session_id": "",
+            "user_id": "",
+            "event_id": "",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "evt_005",
+          "type": "click",
+          "element": "button",
+          "description": "Usuario presiona Activar mi tarjeta",
+          "action": "home/tarjeta_debito/actualizar_button_click",
+          "navigation": "home/tarjeta_debito/actualizar/token",
+          "validation": "terms_checkbox_must_be_checked",
+          "properties": {
+            "screen": "home/tarjeta_debito/actualizar",
+            "button_context": "confirm",
+            "step": "1",
+            "method": "app",
+            "timestamp": "",
+            "session_id": "",
+            "user_id": "",
+            "event_id": "",
+            "platform": "ios"
+          }
+        }
+      ]
+    },
+    {
+      "screenName": "Token Finsus - Confirmar activación",
+      "events": [
+        {
+          "id": "evt_006",
+          "type": "view",
+          "element": "modal",
+          "description": "Usuario ve el modal de Token Finsus para confirmar la transacción",
+          "action": "home/tarjeta_debito/actualizar/token_modal_view",
+          "navigation": "",
+          "validation": "",
+          "properties": {
+            "screen": "home/tarjeta_debito/actualizar/token",
+            "step": "2",
+            "method": "app",
+            "timestamp": "",
+            "session_id": "",
+            "user_id": "",
+            "event_id": "",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "evt_007",
+          "type": "change",
+          "element": "form",
+          "description": "Usuario ingresa dígitos del token",
+          "action": "home/tarjeta_debito/actualizar/token_form_change",
+          "navigation": "",
+          "validation": "token_must_be_5_digits_or_biometric",
+          "properties": {
+            "screen": "home/tarjeta_debito/actualizar/token",
+            "step": "2",
+            "method": "app",
+            "timestamp": "",
+            "session_id": "",
+            "user_id": "",
+            "event_id": "",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "evt_008",
+          "type": "click",
+          "element": "button",
+          "description": "Usuario alterna visibilidad del token",
+          "action": "home/tarjeta_debito/actualizar/button_click",
+          "navigation": "",
+          "validation": "",
+          "properties": {
+            "screen": "home/tarjeta_debito/actualizar/token",
+            "button_context": "toggle_token_visibility",
+            "step": "2",
+            "method": "app",
+            "timestamp": "",
+            "session_id": "",
+            "user_id": "",
+            "event_id": "",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "evt_009",
+          "type": "click",
+          "element": "button",
+          "description": "Usuario elige usar firma biométrica",
+          "action": "home/tarjeta_debito/actualizar/button_click",
+          "navigation": "",
+          "validation": "token_must_be_5_digits_or_biometric",
+          "properties": {
+            "screen": "home/tarjeta_debito/actualizar/token",
+            "button_context": "biometric",
+            "step": "2",
+            "method": "app",
+            "timestamp": "",
+            "session_id": "",
+            "user_id": "",
+            "event_id": "",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "evt_010",
+          "type": "click",
+          "element": "button",
+          "description": "Usuario presiona Aceptar para validar el token",
+          "action": "home/tarjeta_debito/actualizar/token_button_click",
+          "navigation": "home/tarjeta_debito/actualizar/success",
+          "validation": "token_must_be_5_digits_or_biometric",
+          "properties": {
+            "screen": "home/tarjeta_debito/actualizar/token",
+            "button_context": "confirm",
+            "step": "2",
+            "method": "app",
+            "timestamp": "",
+            "session_id": "",
+            "user_id": "",
+            "event_id": "",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "evt_011",
+          "type": "click",
+          "element": "link",
+          "description": "Usuario selecciona Olvidaste tu Token FINSUS?",
+          "action": "home/tarjeta_debito/actualizar/token_link_click",
+          "navigation": "home/tarjeta_debito/actualizar/forgot_token",
+          "validation": "",
+          "properties": {
+            "screen": "home/tarjeta_debito/actualizar/token",
+            "step": "2",
+            "method": "app",
+            "timestamp": "",
+            "session_id": "",
+            "user_id": "",
+            "event_id": "",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "evt_012",
+          "type": "click",
+          "element": "button",
+          "description": "Usuario cierra el modal de Token Finsus",
+          "action": "home/tarjeta_debito/actualizar/token_button_click",
+          "navigation": "home/tarjeta_debito/actualizar",
+          "validation": "",
+          "properties": {
+            "screen": "home/tarjeta_debito/actualizar/token",
+            "button_context": "close",
+            "step": "2",
+            "method": "app",
+            "timestamp": "",
+            "session_id": "",
+            "user_id": "",
+            "event_id": "",
+            "platform": "ios"
+          }
+        }
+      ]
+    },
+    {
+      "screenName": "Activación exitosa",
+      "events": [
+        {
+          "id": "evt_013",
+          "type": "view",
+          "element": "modal",
+          "description": "Usuario ve el mensaje de activación exitosa",
+          "action": "home/tarjeta_debito/actualizar/success_modal_view",
+          "navigation": "",
+          "validation": "",
+          "properties": {
+            "screen": "home/tarjeta_debito/actualizar/success",
+            "step": "3",
+            "method": "app",
+            "timestamp": "",
+            "session_id": "",
+            "user_id": "",
+            "event_id": "",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "evt_014",
+          "type": "click",
+          "element": "button",
+          "description": "Usuario presiona Finalizar para volver a detalles de tarjeta",
+          "action": "home/tarjeta_debito/actualizar/success_button_click",
+          "navigation": "home/tarjeta_debito/virtual",
+          "validation": "",
+          "properties": {
+            "screen": "home/tarjeta_debito/actualizar/success",
+            "button_context": "confirm",
+            "step": "3",
+            "method": "app",
+            "timestamp": "",
+            "session_id": "",
+            "user_id": "",
+            "event_id": "",
+            "platform": "ios"
+          }
+        }
+      ]
+    },
+    {
+      "screenName": "Detalles tarjeta virtual",
+      "events": [
+        {
+          "id": "evt_015",
+          "type": "view",
+          "element": "screen",
+          "description": "Usuario ve la pantalla de detalles de tarjeta virtual",
+          "action": "home/tarjeta_debito/virtual_screen_view",
+          "navigation": "",
+          "validation": "",
+          "properties": {
+            "screen": "home/tarjeta_debito/virtual",
+            "value": 4000,
+            "method": "app",
+            "timestamp": "",
+            "session_id": "",
+            "user_id": "",
+            "event_id": "",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "evt_016",
+          "type": "select",
+          "element": "tab",
+          "description": "Usuario selecciona la pestaña Física",
+          "action": "home/tarjeta_debito/tab_select",
+          "navigation": "home/tarjeta_debito/fisica",
+          "validation": "",
+          "properties": {
+            "screen": "home/tarjeta_debito/virtual",
+            "step": "",
+            "method": "app",
+            "timestamp": "",
+            "session_id": "",
+            "user_id": "",
+            "event_id": "",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "evt_017",
+          "type": "click",
+          "element": "button",
+          "description": "Usuario presiona Bloquear tarjeta virtual",
+          "action": "home/tarjeta_debito/virtual_button_click",
+          "navigation": "home/tarjeta_debito/block",
+          "validation": "",
+          "properties": {
+            "screen": "home/tarjeta_debito/virtual",
+            "button_context": "block",
+            "step": "",
+            "method": "app",
+            "timestamp": "",
+            "session_id": "",
+            "user_id": "",
+            "event_id": "",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "evt_018",
+          "type": "click",
+          "element": "button",
+          "description": "Usuario presiona Reportar tarjeta virtual",
+          "action": "home/tarjeta_debito/virtual_button_click",
+          "navigation": "home/tarjeta_debito/report",
+          "validation": "",
+          "properties": {
+            "screen": "home/tarjeta_debito/virtual",
+            "button_context": "report",
+            "step": "",
+            "method": "app",
+            "timestamp": "",
+            "session_id": "",
+            "user_id": "",
+            "event_id": "",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "evt_019",
+          "type": "click",
+          "element": "link",
+          "description": "Usuario abre Ver datos de la tarjeta",
+          "action": "home/tarjeta_debito/virtual_link_click",
+          "navigation": "home/tarjeta_debito/details",
+          "validation": "",
+          "properties": {
+            "screen": "home/tarjeta_debito/virtual",
+            "step": "",
+            "method": "app",
+            "timestamp": "",
+            "session_id": "",
+            "user_id": "",
+            "event_id": "",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "evt_020",
+          "type": "click",
+          "element": "link",
+          "description": "Usuario explora beneficio Paga con Apple Pay",
+          "action": "home/tarjeta_debito/virtual_link_click",
+          "navigation": "home/tarjeta_debito/beneficio/apple_pay",
+          "validation": "",
+          "properties": {
+            "screen": "home/tarjeta_debito/virtual",
+            "step": "",
+            "method": "app",
+            "timestamp": "",
+            "session_id": "",
+            "user_id": "",
+            "event_id": "",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "evt_021",
+          "type": "click",
+          "element": "link",
+          "description": "Usuario explora beneficio Cinepolis",
+          "action": "home/tarjeta_debito/virtual_link_click",
+          "navigation": "home/tarjeta_debito/beneficio/cinepolis",
+          "validation": "",
+          "properties": {
+            "screen": "home/tarjeta_debito/virtual",
+            "step": "",
+            "method": "app",
+            "timestamp": "",
+            "session_id": "",
+            "user_id": "",
+            "event_id": "",
+            "platform": "ios"
+          }
+        }
+      ]
+    }
+  ],
+  "flowDescription": "Flujo de actualización de tarjeta de débito: aceptación de términos, confirmación con token Finsus, activación exitosa y redirección a detalles de tarjeta virtual",
+  "timestamp": "2025-06-19T13:43:25.364Z"
+}

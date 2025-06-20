@@ -1,0 +1,77 @@
+post evento con habilidades y todo al POST {EXTERNAL_API_URL}/Evento/paid-event-generate
+{
+  "evento": {
+    "nombre": "Mi Evento",
+    "fechaDeEvento": "2024-03-20",
+    "costoTotal": 1000,
+    "depositado": 500,
+    "estatus": true,
+    "idEmpresa": 1,
+    "urlImagen": "https://ejemplo.com/imagen.jpg",
+    "idCliente": 1,
+    "idAdmin": 1,
+    "idioma": "ES"
+  },
+  "habilidades": {
+    "status": "Activo",
+    "paquete": "Premium",
+    "fechaHabilitacion": "2024-03-20",
+    "fechaDeshabilitacion": "2024-03-21",
+    "numeroInvitados": 100,
+    "secciones": 5,
+    "numeroImagenes": 1000,
+    "enableParejas": true,
+    "verification": true,
+    "numeroMensajes": 50,
+    "tipoLetra": "Arial",
+    "heightLetra": 12,
+    "avisos": true,
+    "musica": "https://ejemplo.com/musica.mp3",
+    "marcaAgua": false,
+    "typeFooter": "RSVP"
+  },
+  "cliente": {
+    "nombre": "Juan Pérez",
+    "correo": "juan@ejemplo.com",
+    "telefono": "1234567890"
+  }
+}
+
+PUT evento con habilidades y todo al PUT {EXTERNAL_API_URL}/Evento/paid-event-update/{id}
+
+
+{
+  "evento": {
+    "nombre": "Nombre del Evento",
+    "fechaDeEvento": "2024-03-20",
+    "costoTotal": 1000,
+    "depositado": 500,
+    "estatus": true,
+    "urlImagen": "data:image/jpeg;base64,...", // opcional
+    "idCliente": 1,
+    "idioma": "EN" 
+  },
+  "habilidades": {
+    "status": true,
+    "paquete": "basico",
+    "fechaHabilitacion": "2024-03-18",
+    "fechaDeshabilitacion": "2024-03-22",
+    "numeroInvitados": 100,
+    "secciones": 5,
+    "numeroImagenes": 50,
+    "enableParejas": true,
+    "verification": true,
+    "numeroMensajes": 10,
+    "tipoLetra": "arial",
+    "heightLetra": 12,
+    "avisos": true,
+    "musica": true,
+    "marcaAgua": false,
+    "typeFooter": "VIP"
+  },
+  "cliente": {
+    "nombre": "Nombre del Cliente",
+    "correo": "cliente@ejemplo.com",
+    "telefono": "1234567890"
+  }
+}
