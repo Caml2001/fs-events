@@ -107,7 +107,7 @@ function App() {
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-xl font-semibold">Resultados del Análisis</h2>
                 <div className="flex gap-2">
-                  <ExportButton result={result} />
+                  <ExportButton result={result} images={images} />
                   <button
                     onClick={handleReset}
                     className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors"

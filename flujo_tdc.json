@@ -1,0 +1,609 @@
+{
+  "screens": [
+    {
+      "screenName": "imagen_01",
+      "events": [
+        {
+          "id": "credit_card_overview_00_view",
+          "type": "view",
+          "element": "screen",
+          "description": "User lands on the credit card overview screen",
+          "action": "home/credits/credit_card_view",
+          "navigation": "",
+          "validation": "",
+          "properties": {
+            "screen": "home/credits/credit_card",
+            "timestamp": "will be added at runtime",
+            "session_id": "will be added at runtime",
+            "user_id": "will be added at runtime",
+            "event_id": "will be added at runtime",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "credit_card_overview_01_back",
+          "type": "click",
+          "element": "button",
+          "description": "User taps back to exit credit card section",
+          "action": "home/credits/credit_card_button_click",
+          "navigation": "home/credits",
+          "validation": "",
+          "properties": {
+            "screen": "home/credits/credit_card",
+            "button_context": "back",
+            "timestamp": "will be added at runtime",
+            "session_id": "will be added at runtime",
+            "user_id": "will be added at runtime",
+            "event_id": "will be added at runtime",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "credit_card_overview_02_withdraw",
+          "type": "click",
+          "element": "button",
+          "description": "User initiates a withdrawal from credit funds",
+          "action": "home/credits/credit_card_button_click",
+          "navigation": "home/credits/credit_card/withdraw",
+          "validation": "",
+          "properties": {
+            "screen": "home/credits/credit_card",
+            "button_context": "withdraw",
+            "timestamp": "will be added at runtime",
+            "session_id": "will be added at runtime",
+            "user_id": "will be added at runtime",
+            "event_id": "will be added at runtime",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "credit_card_overview_03_card_select_existing",
+          "type": "select",
+          "element": "card",
+          "description": "User selects an existing card (ending 8523)",
+          "action": "home/credits/credit_card_card_select",
+          "navigation": "home/credits/credit_card/card/8523",
+          "validation": "",
+          "properties": {
+            "screen": "home/credits/credit_card",
+            "card_context": "ending_8523",
+            "timestamp": "will be added at runtime",
+            "session_id": "will be added at runtime",
+            "user_id": "will be added at runtime",
+            "event_id": "will be added at runtime",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "credit_card_overview_04_card_select_existing",
+          "type": "select",
+          "element": "card",
+          "description": "User selects an existing card (ending 2150)",
+          "action": "home/credits/credit_card_card_select",
+          "navigation": "home/credits/credit_card/card/2150",
+          "validation": "",
+          "properties": {
+            "screen": "home/credits/credit_card",
+            "card_context": "ending_2150",
+            "timestamp": "will be added at runtime",
+            "session_id": "will be added at runtime",
+            "user_id": "will be added at runtime",
+            "event_id": "will be added at runtime",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "credit_card_overview_05_card_add",
+          "type": "select",
+          "element": "card",
+          "description": "User taps to add a new additional card",
+          "action": "home/credits/credit_card_card_select",
+          "navigation": "home/credits/credit_card/issue_card",
+          "validation": "",
+          "properties": {
+            "screen": "home/credits/credit_card",
+            "card_context": "add_new",
+            "timestamp": "will be added at runtime",
+            "session_id": "will be added at runtime",
+            "user_id": "will be added at runtime",
+            "event_id": "will be added at runtime",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "credit_card_overview_06_top_up",
+          "type": "click",
+          "element": "button",
+          "description": "User chooses to top-up credit account",
+          "action": "home/credits/credit_card_button_click",
+          "navigation": "home/credits/credit_card/topup_account",
+          "validation": "",
+          "properties": {
+            "screen": "home/credits/credit_card",
+            "button_context": "top_up",
+            "timestamp": "will be added at runtime",
+            "session_id": "will be added at runtime",
+            "user_id": "will be added at runtime",
+            "event_id": "will be added at runtime",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "credit_card_overview_07_bill_pay",
+          "type": "click",
+          "element": "button",
+          "description": "User chooses to pay a bill",
+          "action": "home/credits/credit_card_button_click",
+          "navigation": "home/credits/credit_card/bill_pay",
+          "validation": "",
+          "properties": {
+            "screen": "home/credits/credit_card",
+            "button_context": "bill_pay",
+            "timestamp": "will be added at runtime",
+            "session_id": "will be added at runtime",
+            "user_id": "will be added at runtime",
+            "event_id": "will be added at runtime",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "credit_card_overview_08_transfer",
+          "type": "click",
+          "element": "button",
+          "description": "User chooses to transfer funds",
+          "action": "home/credits/credit_card_button_click",
+          "navigation": "home/credits/credit_card/transfer",
+          "validation": "",
+          "properties": {
+            "screen": "home/credits/credit_card",
+            "button_context": "transfer",
+            "timestamp": "will be added at runtime",
+            "session_id": "will be added at runtime",
+            "user_id": "will be added at runtime",
+            "event_id": "will be added at runtime",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "credit_card_overview_09_transactions",
+          "type": "click",
+          "element": "card",
+          "description": "User views transaction history",
+          "action": "home/credits/credit_card_card_click",
+          "navigation": "home/credits/credit_card/transactions",
+          "validation": "",
+          "properties": {
+            "screen": "home/credits/credit_card",
+            "timestamp": "will be added at runtime",
+            "session_id": "will be added at runtime",
+            "user_id": "will be added at runtime",
+            "event_id": "will be added at runtime",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "credit_card_overview_10_credit_payment_details",
+          "type": "click",
+          "element": "link",
+          "description": "User opens credit payment details",
+          "action": "home/credits/credit_card_link_click",
+          "navigation": "home/credits/credit_card/payment_details",
+          "validation": "",
+          "properties": {
+            "screen": "home/credits/credit_card",
+            "link_context": "credit_payment_details",
+            "timestamp": "will be added at runtime",
+            "session_id": "will be added at runtime",
+            "user_id": "will be added at runtime",
+            "event_id": "will be added at runtime",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "credit_card_overview_11_topup_clabe_details",
+          "type": "click",
+          "element": "link",
+          "description": "User opens Top-up with CLABE details",
+          "action": "home/credits/credit_card_link_click",
+          "navigation": "home/credits/credit_card/topup_clabe",
+          "validation": "",
+          "properties": {
+            "screen": "home/credits/credit_card",
+            "link_context": "top_up_with_clabe_details",
+            "timestamp": "will be added at runtime",
+            "session_id": "will be added at runtime",
+            "user_id": "will be added at runtime",
+            "event_id": "will be added at runtime",
+            "platform": "ios"
+          }
+        }
+      ]
+    },
+    {
+      "screenName": "Issue Additional Card Modal",
+      "events": [
+        {
+          "id": "issue_card_modal_00_view",
+          "type": "view",
+          "element": "modal",
+          "description": "User sees options to issue an additional card",
+          "action": "home/credits/credit_card/issue_card_modal_view",
+          "navigation": "",
+          "validation": "",
+          "properties": {
+            "screen": "home/credits/credit_card/issue_card",
+            "step": "issue_additional_card",
+            "timestamp": "will be added at runtime",
+            "session_id": "will be added at runtime",
+            "user_id": "will be added at runtime",
+            "event_id": "will be added at runtime",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "issue_card_modal_01_physical",
+          "type": "click",
+          "element": "button",
+          "description": "User issues a physical additional card",
+          "action": "home/credits/credit_card/issue_card_button_click",
+          "navigation": "home/credits/credit_card/issue_card/physical",
+          "validation": "",
+          "properties": {
+            "screen": "home/credits/credit_card/issue_card",
+            "button_context": "issue_physical",
+            "step": "issue_additional_card",
+            "timestamp": "will be added at runtime",
+            "session_id": "will be added at runtime",
+            "user_id": "will be added at runtime",
+            "event_id": "will be added at runtime",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "issue_card_modal_02_digital",
+          "type": "click",
+          "element": "button",
+          "description": "User issues a digital additional card",
+          "action": "home/credits/credit_card/issue_card_button_click",
+          "navigation": "home/credits/credit_card/issue_card/digital",
+          "validation": "",
+          "properties": {
+            "screen": "home/credits/credit_card/issue_card",
+            "button_context": "issue_digital",
+            "step": "issue_additional_card",
+            "timestamp": "will be added at runtime",
+            "session_id": "will be added at runtime",
+            "user_id": "will be added at runtime",
+            "event_id": "will be added at runtime",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "issue_card_modal_03_back",
+          "type": "click",
+          "element": "button",
+          "description": "User closes the issue card modal",
+          "action": "home/credits/credit_card/issue_card_button_click",
+          "navigation": "home/credits/credit_card",
+          "validation": "",
+          "properties": {
+            "screen": "home/credits/credit_card/issue_card",
+            "button_context": "back",
+            "step": "issue_additional_card",
+            "timestamp": "will be added at runtime",
+            "session_id": "will be added at runtime",
+            "user_id": "will be added at runtime",
+            "event_id": "will be added at runtime",
+            "platform": "ios"
+          }
+        }
+      ]
+    },
+    {
+      "screenName": "Top-up Account Modal",
+      "events": [
+        {
+          "id": "topup_account_modal_00_view",
+          "type": "view",
+          "element": "modal",
+          "description": "User sees top-up methods",
+          "action": "home/credits/credit_card/topup_account_modal_view",
+          "navigation": "",
+          "validation": "",
+          "properties": {
+            "screen": "home/credits/credit_card/topup_account",
+            "step": "top_up_account",
+            "timestamp": "will be added at runtime",
+            "session_id": "will be added at runtime",
+            "user_id": "will be added at runtime",
+            "event_id": "will be added at runtime",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "topup_account_modal_01_clabe",
+          "type": "click",
+          "element": "link",
+          "description": "User selects top-up via CLABE",
+          "action": "home/credits/credit_card/topup_account_link_click",
+          "navigation": "home/credits/credit_card/topup_clabe",
+          "validation": "",
+          "properties": {
+            "screen": "home/credits/credit_card/topup_account",
+            "link_context": "with_clabe_from_another_bank",
+            "method": "app",
+            "step": "top_up_account",
+            "timestamp": "will be added at runtime",
+            "session_id": "will be added at runtime",
+            "user_id": "will be added at runtime",
+            "event_id": "will be added at runtime",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "topup_account_modal_02_cash_stores",
+          "type": "click",
+          "element": "link",
+          "description": "User selects top-up with cash in stores",
+          "action": "home/credits/credit_card/topup_account_link_click",
+          "navigation": "home/credits/credit_card/topup_cash_in_stores",
+          "validation": "",
+          "properties": {
+            "screen": "home/credits/credit_card/topup_account",
+            "link_context": "with_cash_in_stores",
+            "method": "app",
+            "step": "top_up_account",
+            "timestamp": "will be added at runtime",
+            "session_id": "will be added at runtime",
+            "user_id": "will be added at runtime",
+            "event_id": "will be added at runtime",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "topup_account_modal_03_cash_banks",
+          "type": "click",
+          "element": "link",
+          "description": "User selects top-up with cash in banks",
+          "action": "home/credits/credit_card/topup_account_link_click",
+          "navigation": "home/credits/credit_card/topup_cash_in_banks",
+          "validation": "",
+          "properties": {
+            "screen": "home/credits/credit_card/topup_account",
+            "link_context": "with_cash_in_banks",
+            "method": "app",
+            "step": "top_up_account",
+            "timestamp": "will be added at runtime",
+            "session_id": "will be added at runtime",
+            "user_id": "will be added at runtime",
+            "event_id": "will be added at runtime",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "topup_account_modal_04_back",
+          "type": "click",
+          "element": "button",
+          "description": "User closes the top-up methods modal",
+          "action": "home/credits/credit_card/topup_account_button_click",
+          "navigation": "home/credits/credit_card",
+          "validation": "",
+          "properties": {
+            "screen": "home/credits/credit_card/topup_account",
+            "button_context": "back",
+            "step": "top_up_account",
+            "timestamp": "will be added at runtime",
+            "session_id": "will be added at runtime",
+            "user_id": "will be added at runtime",
+            "event_id": "will be added at runtime",
+            "platform": "ios"
+          }
+        }
+      ]
+    },
+    {
+      "screenName": "Top-up with CLABE",
+      "events": [
+        {
+          "id": "topup_clabe_00_view",
+          "type": "view",
+          "element": "screen",
+          "description": "User views CLABE top-up instructions",
+          "action": "home/credits/credit_card/topup_clabe_view",
+          "navigation": "",
+          "validation": "",
+          "properties": {
+            "screen": "home/credits/credit_card/topup_clabe",
+            "step": "top_up_with_clabe",
+            "timestamp": "will be added at runtime",
+            "session_id": "will be added at runtime",
+            "user_id": "will be added at runtime",
+            "event_id": "will be added at runtime",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "topup_clabe_01_copy_clabe",
+          "type": "click",
+          "element": "button",
+          "description": "User copies CLABE number",
+          "action": "home/credits/credit_card/topup_clabe_button_click",
+          "navigation": "",
+          "validation": "",
+          "properties": {
+            "screen": "home/credits/credit_card/topup_clabe",
+            "button_context": "copy_clabe",
+            "step": "top_up_with_clabe",
+            "method": "app",
+            "timestamp": "will be added at runtime",
+            "session_id": "will be added at runtime",
+            "user_id": "will be added at runtime",
+            "event_id": "will be added at runtime",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "topup_clabe_02_copy_beneficiary",
+          "type": "click",
+          "element": "button",
+          "description": "User copies beneficiary name",
+          "action": "home/credits/credit_card/topup_clabe_button_click",
+          "navigation": "",
+          "validation": "",
+          "properties": {
+            "screen": "home/credits/credit_card/topup_clabe",
+            "button_context": "copy_beneficiary",
+            "step": "top_up_with_clabe",
+            "method": "app",
+            "timestamp": "will be added at runtime",
+            "session_id": "will be added at runtime",
+            "user_id": "will be added at runtime",
+            "event_id": "will be added at runtime",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "topup_clabe_03_share",
+          "type": "click",
+          "element": "button",
+          "description": "User shares CLABE details",
+          "action": "home/credits/credit_card/topup_clabe_button_click",
+          "navigation": "",
+          "validation": "",
+          "properties": {
+            "screen": "home/credits/credit_card/topup_clabe",
+            "button_context": "share_details",
+            "step": "top_up_with_clabe",
+            "method": "app",
+            "timestamp": "will be added at runtime",
+            "session_id": "will be added at runtime",
+            "user_id": "will be added at runtime",
+            "event_id": "will be added at runtime",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "topup_clabe_04_back",
+          "type": "click",
+          "element": "button",
+          "description": "User closes CLABE top-up screen",
+          "action": "home/credits/credit_card/topup_clabe_button_click",
+          "navigation": "home/credits/credit_card",
+          "validation": "",
+          "properties": {
+            "screen": "home/credits/credit_card/topup_clabe",
+            "button_context": "back",
+            "step": "top_up_with_clabe",
+            "timestamp": "will be added at runtime",
+            "session_id": "will be added at runtime",
+            "user_id": "will be added at runtime",
+            "event_id": "will be added at runtime",
+            "platform": "ios"
+          }
+        }
+      ]
+    },
+    {
+      "screenName": "Cash In Stores Top-up",
+      "events": [
+        {
+          "id": "cash_in_stores_00_view",
+          "type": "view",
+          "element": "screen",
+          "description": "User views cash-in-stores barcode screen",
+          "action": "home/credits/credit_card/topup_cash_in_stores_view",
+          "navigation": "",
+          "validation": "",
+          "properties": {
+            "screen": "home/credits/credit_card/topup_cash_in_stores",
+            "step": "top_up_cash_in_stores",
+            "timestamp": "will be added at runtime",
+            "session_id": "will be added at runtime",
+            "user_id": "will be added at runtime",
+            "event_id": "will be added at runtime",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "cash_in_stores_01_share",
+          "type": "click",
+          "element": "button",
+          "description": "User shares the cash-in barcode",
+          "action": "home/credits/credit_card/topup_cash_in_stores_button_click",
+          "navigation": "",
+          "validation": "",
+          "properties": {
+            "screen": "home/credits/credit_card/topup_cash_in_stores",
+            "button_context": "share",
+            "step": "top_up_cash_in_stores",
+            "method": "app",
+            "timestamp": "will be added at runtime",
+            "session_id": "will be added at runtime",
+            "user_id": "will be added at runtime",
+            "event_id": "will be added at runtime",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "cash_in_stores_02_partner_select",
+          "type": "select",
+          "element": "card",
+          "description": "User switches cash-in partner (e.g., Walmart, 7-Eleven)",
+          "action": "home/credits/credit_card/topup_cash_in_stores_card_select",
+          "navigation": "",
+          "validation": "",
+          "properties": {
+            "screen": "home/credits/credit_card/topup_cash_in_stores",
+            "partner_context": "walmart",
+            "step": "top_up_cash_in_stores",
+            "timestamp": "will be added at runtime",
+            "session_id": "will be added at runtime",
+            "user_id": "will be added at runtime",
+            "event_id": "will be added at runtime",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "cash_in_stores_03_need_to_pay_more",
+          "type": "click",
+          "element": "link",
+          "description": "User taps need to pay more link",
+          "action": "home/credits/credit_card/topup_cash_in_stores_link_click",
+          "navigation": "home/credits/credit_card/topup_cash_in_stores/limits",
+          "validation": "",
+          "properties": {
+            "screen": "home/credits/credit_card/topup_cash_in_stores",
+            "link_context": "need_to_pay_more",
+            "step": "top_up_cash_in_stores",
+            "timestamp": "will be added at runtime",
+            "session_id": "will be added at runtime",
+            "user_id": "will be added at runtime",
+            "event_id": "will be added at runtime",
+            "platform": "ios"
+          }
+        },
+        {
+          "id": "cash_in_stores_04_back",
+          "type": "click",
+          "element": "button",
+          "description": "User closes cash-in-stores screen",
+          "action": "home/credits/credit_card/topup_cash_in_stores_button_click",
+          "navigation": "home/credits/credit_card",
+          "validation": "",
+          "properties": {
+            "screen": "home/credits/credit_card/topup_cash_in_stores",
+            "button_context": "back",
+            "step": "top_up_cash_in_stores",
+            "timestamp": "will be added at runtime",
+            "session_id": "will be added at runtime",
+            "user_id": "will be added at runtime",
+            "event_id": "will be added at runtime",
+            "platform": "ios"
+          }
+        }
+      ]
+    }
+  ],
+  "flowDescription": "User views credit card balance, manages cards, and tops up the credit account via CLABE or cash-in-stores options.",
+  "timestamp": "2025-06-20T18:27:35.808Z"
+}

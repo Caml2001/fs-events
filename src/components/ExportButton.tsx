@@ -1,12 +1,14 @@
 import React from 'react';
-import { Download } from 'lucide-react';
+import { Download, FileArchive } from 'lucide-react';
+import JSZip from 'jszip';
 import type { AnalysisResult } from '../types/index.js';
 
 interface ExportButtonProps {
   result: AnalysisResult;
+  images?: string[];
 }
 
-export function ExportButton({ result }: ExportButtonProps) {
+export function ExportButton({ result, images = [] }: ExportButtonProps) {
   const exportAsJSON = () => {
     const dataStr = JSON.stringify(result, null, 2);
     const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
@@ -86,8 +88,47 @@ export function ExportButton({ result }: ExportButtonProps) {
     linkElement.click();
   };
 
+  const exportAsZip = async () => {
+    const zip = new JSZip();
+    const flowName = result.flowDescription.replace(/[^a-zA-Z0-9]/g, '_').toLowerCase();
+    
+    // Create a modified result where screenName references images
+    const modifiedResult = {
+      ...result,
+      screens: result.screens.map((screen, index) => ({
+        ...screen,
+        screenName: `img_${index + 1}`,
+        originalScreenName: screen.screenName
+      }))
+    };
+    
+    // Add the events JSON file
+    zip.file(`${flowName}_eventos.json`, JSON.stringify(modifiedResult, null, 2));
+    
+    // Create images folder
+    const imgFolder = zip.folder(`${flowName}_imagenes`);
+    
+    // Add images to the folder
+    if (images.length > 0 && imgFolder) {
+      for (let i = 0; i < images.length; i++) {
+        const imageData = images[i];
+        const base64Data = imageData.split(',')[1]; // Remove data:image/png;base64, prefix
+        imgFolder.file(`img_${i + 1}.png`, base64Data, { base64: true });
+      }
+    }
+    
+    // Generate and download the ZIP file
+    const content = await zip.generateAsync({ type: 'blob' });
+    const url = URL.createObjectURL(content);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `${flowName}.zip`;
+    link.click();
+    URL.revokeObjectURL(url);
+  };
+
   return (
-    <div className="flex gap-2">
+    <div className="flex gap-2 flex-wrap">
       <button
         onClick={exportAsJSON}
         className="flex items-center gap-2 px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
@@ -108,6 +149,13 @@ export function ExportButton({ result }: ExportButtonProps) {
       >
         <Download className="h-4 w-4" />
         Exportar SDK
+      </button>
+      <button
+        onClick={exportAsZip}
+        className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+      >
+        <FileArchive className="h-4 w-4" />
+        Exportar ZIP
       </button>
     </div>
   );

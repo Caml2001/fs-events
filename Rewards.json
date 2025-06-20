@@ -1,0 +1,68 @@
+{
+    "screenName": "Recompensas",
+    "events": [
+      {
+        "id": "home/recompensas_button_click_back",
+        "type": "click",
+        "element": "button",
+        "description": "User taps the back arrow to return to the previous screen",
+        "action": "home/recompensas_button_click",
+        "navigation": "previous",
+        "validation": null,
+        "properties": {
+          "screen": "home/recompensas",
+          "button_context": "back",
+          "value": null,
+          "step": null,
+          "method": null,
+          "timestamp": "will be added at runtime",
+          "session_id": "will be added at runtime",
+          "user_id": "will be added at runtime",
+          "event_id": "will be added at runtime",
+          "platform": "web"
+        }
+      },
+      {
+        "id": "home/recompensas_button_click_help",
+        "type": "click",
+        "element": "button",
+        "description": "User taps the help icon to view more information about redeeming points",
+        "action": "home/recompensas_button_click",
+        "navigation": "modal_help",
+        "validation": null,
+        "properties": {
+          "screen": "home/recompensas",
+          "button_context": "help",
+          "value": null,
+          "step": null,
+          "method": null,
+          "timestamp": "will be added at runtime",
+          "session_id": "will be added at runtime",
+          "user_id": "will be added at runtime",
+          "event_id": "will be added at runtime",
+          "platform": "web"
+        }
+      },
+      {
+        "id": "home/recompensas_button_click_redeem",
+        "type": "click",
+        "element": "button",
+        "description": "User taps 'Canjear' to redeem the Promesa reward for 8.8% cashback",
+        "action": "home/recompensas_button_click",
+        "navigation": "home/recompensas",
+        "validation": null,
+        "properties": {
+          "screen": "home/recompensas",
+          "button_context": "redeem",
+          "value": 8.8,
+          "step": null,
+          "method": null,
+          "timestamp": "will be added at runtime",
+          "session_id": "will be added at runtime",
+          "user_id": "will be added at runtime",
+          "event_id": "will be added at runtime",
+          "platform": "web"
+        }
+      }
+    ]
+  }
